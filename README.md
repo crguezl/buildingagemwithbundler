@@ -49,17 +49,16 @@ This gem describes the way to build a gem using bundler
 
 4. vi lib/lorem_casiano.rb. Introduce method ipsum
 
-5. Fill the TODOs in lorem_casiano.gemspec
+5. Fill the TODOs and homepage fields in lorem_casiano.gemspec
          vi lorem_casiano.gemspec
 
 6. Generate the gem:
 
-        $ gem build lorem_casiano.gemspec 
-        WARNING:  no homepage specified
-          Successfully built RubyGem
-          Name: lorem_casiano
-          Version: 0.0.2
-          File: lorem_casiano-0.0.2.gem
+      $ gem build lorem_casiano.gemspec 
+        Successfully built RubyGem
+        Name: lorem_casiano
+        Version: 0.0.2
+        File: lorem_casiano-0.0.2.gem
 
 which generates a file "lorem_casiano-0.0.2.gem"
 
