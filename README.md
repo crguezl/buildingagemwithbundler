@@ -71,7 +71,7 @@ which generates a file "lorem_casiano-0.0.2.gem"
 Of course you have to have an account in rubygems.org
 
 8. Lead your browser to "https://rubygems.org/gems/lorem_casiano".
-Your gem must be alloctaed there
+   Your gem must be allocated there
 
 
 ## Usage
