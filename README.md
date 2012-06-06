@@ -62,6 +62,17 @@ This gem describes the way to build a gem using bundler
 
 which generates a file "lorem_casiano-0.0.2.gem"
 
+7. Push the gem to rubygems.org
+
+          $ gem push lorem_casiano-0.0.2.gem 
+          Pushing gem to https://rubygems.org...
+          Successfully registered gem: lorem_casiano (0.0.2)
+
+Of course you have to have an account in rubygems.org
+
+8. Lead your browser to "https://rubygems.org/gems/lorem_casiano".
+Your gem must be alloctaed there
+
 
 ## Usage
 
