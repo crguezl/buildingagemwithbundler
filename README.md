@@ -151,7 +151,11 @@ Thes are the tasks that provides:
       lorem_casiano 0.0.3 built to pkg/lorem_casiano-0.0.3.gem
       lorem_casiano (0.0.3) installed
 
-14. 
+14. The rake release task creates a tag on GitHub with the version 
+of your gem, push the locally committed files to the master on 
+GitHub and publishes your gem on RubyGems.org. 
+Remember, commit your changes, before run this task.
+
 ## Usage
 
 TODO: Write usage instructions here
