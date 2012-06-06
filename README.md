@@ -199,9 +199,11 @@ TODO: Write usage instructions here
 
 1. http://railscasts.com/episodes/245-new-gem-with-bundler
    "New Gem with Bundler"
+  Source code: https://github.com/ryanb/railscasts-episodes/tree/master/episode-245
 
 2. http://no-fucking-idea.com/blog/2012/04/11/building-gem-with-bundler/ 
    "Building Gem With Bundler"
 
 3. http://pablotron.org/files/signing_gems.txt
 
+4. Gem::Specification Reference: http://docs.rubygems.org/read/chapter/20
