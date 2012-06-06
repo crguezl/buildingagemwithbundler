@@ -8,6 +8,8 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{See README.md for more details}
   gem.homepage      = "https://rubygems.org/gems/lorem_casiano"
 
+  gem.add_development_dependency('rspec')
+
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})

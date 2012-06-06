@@ -73,7 +73,85 @@ Of course you have to have an account in rubygems.org
 8. Lead your browser to "https://rubygems.org/gems/lorem_casiano".
    Your gem must be allocated there
 
+9. The "Gemfile" file has this contents:
 
+      $ cat Gemfile 
+      source 'https://rubygems.org'
+
+      # Specify your gem's dependencies in lorem_casiano.gemspec
+      gemspec
+
+The "gemspec" leads Bundler to use "lorem_casiano.gemspec"
+to solve the dependencies. This way, there is no need to specify
+dependencies here.
+
+10. $ bundle
+  Fetching gem metadata from https://rubygems.org/....
+  Installing diff-lcs (1.1.3) 
+  Using lorem_casiano (0.0.3) from source at /Users/casiano/Dropbox/src/ruby/makingagemwithbundler/lorem_casiano 
+  Installing rspec-core (2.10.1) 
+  Installing rspec-expectations (2.10.0) 
+  Installing rspec-mocks (2.10.1) 
+  Installing rspec (2.10.0) 
+  Using bundler (1.1.3) 
+  Your bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.
+
+10. A new call to bundle recomputes and install the dependencies:
+
+  $ bundle
+    Fetching gem metadata from https://rubygems.org/....
+    Installing diff-lcs (1.1.3) 
+    Using lorem_casiano (0.0.3) from source at /Users/casiano/Dropbox/src/ruby/makingagemwithbundler/lorem_casiano 
+    Installing rspec-core (2.10.1) 
+    Installing rspec-expectations (2.10.0) 
+    Installing rspec-mocks (2.10.1) 
+    Installing rspec (2.10.0) 
+    Using bundler (1.1.3) 
+    Your bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.
+
+11. The Rakefile contains:
+
+$ cat Rakefile 
+  #!/usr/bin/env rake
+  require "bundler/gem_tasks"
+
+Thes are the tasks that provides:
+
+  $ rake -T
+  rake build    # Build lorem_casiano-0.0.3.gem into the pkg directory
+  rake install  # Build and install lorem_casiano-0.0.3.gem into system gems
+  rake release  # Create tag v0.0.3 and build and push lorem_casiano-0.0.3.gem to Rubygems
+
+12. Let us see the "build" target:
+
+    $ rake build
+    lorem_casiano 0.0.3 built to pkg/lorem_casiano-0.0.3.gem
+
+    Now we have this structure:
+
+      $ tree
+      .
+      ├── Gemfile
+      ├── Gemfile.lock
+      ├── LICENSE
+      ├── README.md
+      ├── Rakefile
+      ├── lib
+      │   ├── lorem_casiano
+      │   │   └── version.rb
+      │   └── lorem_casiano.rb
+      ├── lorem_casiano-0.0.2.gem
+      ├── lorem_casiano.gemspec
+      └── pkg
+          └── lorem_casiano-0.0.3.gem
+
+13. We can install the gem:
+
+      $ rake install
+      lorem_casiano 0.0.3 built to pkg/lorem_casiano-0.0.3.gem
+      lorem_casiano (0.0.3) installed
+
+14. 
 ## Usage
 
 TODO: Write usage instructions here
