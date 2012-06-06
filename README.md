@@ -156,6 +156,33 @@ of your gem, push the locally committed files to the master on
 GitHub and publishes your gem on RubyGems.org. 
 Remember, commit your changes, before run this task.
 
+    $git commit -m 'preparing release 0.0.3' -a
+
+Set the remote:
+
+    $ git remote rm origin
+    $ git remote add origin git@github.com:crguezl/buildingagemwithbundler.git
+
+push the changes:
+
+    $ git push origin master
+    Counting objects: 31, done.
+    Delta compression using up to 2 threads.
+    Compressing objects: 100% (26/26), done.
+    Writing objects: 100% (31/31), 5.78 KiB, done.
+    Total 31 (delta 11), reused 0 (delta 0)
+    To git@github.com:crguezl/buildingagemwithbundler.git
+     * [new branch]      master -> master
+
+Release:
+
+    $ rake release
+      lorem_casiano 0.0.3 built to pkg/lorem_casiano-0.0.3.gem
+      Tagged v0.0.3
+      Pushed git commits and tags
+      Pushed lorem_casiano 0.0.3 to rubygems.org
+
+
 ## Usage
 
 TODO: Write usage instructions here
